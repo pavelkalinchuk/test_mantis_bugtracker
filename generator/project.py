@@ -9,4 +9,3 @@ def generate_random_name():
 
 
 project = (Project(name=generate_random_name()))
-# project_name = generate_random_name()

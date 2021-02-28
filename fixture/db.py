@@ -23,29 +23,11 @@ class DbFixture:
             cursor.close()
         return list_project
 
-    # def get_contact_list(self):
-    #     list_contacts = []
-    #     cursor = self.connection.cursor()
-    #     try:
-    #         cursor.execute(
-    #             "select id, firstname, middlename, lastname, address, home, mobile, work, email, phone2 from addressbook where deprecated = '0000-00-00 00:00:00'")
-    #         for row in cursor:
-    #             (id_, firstname, middlename, lastname, address, home, mobile, work, email, phone2) = row
-    #             list_contacts.append(Contact
-    #                                  (id=str(id_),
-    #                                   first_name=firstname,
-    #                                   middle_name=middlename,
-    #                                   last_name=lastname,
-    #                                   address=address,
-    #                                   phone_home=home,
-    #                                   phone_mobile=mobile,
-    #                                   phone_work=work,
-    #                                   email=email,
-    #                                   phone_secondary=phone2
-    #                                   ))
-    #     finally:
-    #         cursor.close()
-    #     return list_contacts
+    def get_project_name_list(self):
+        new_project_list = []
+        for i in self.get_project_list():
+            new_project_list.append(i.name)
+        return new_project_list
 
     def destroy(self):
         self.connection.close()

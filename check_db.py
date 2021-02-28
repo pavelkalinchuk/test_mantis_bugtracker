@@ -9,9 +9,12 @@ try:
     # if len(db.get_group_list()) > 0:
     #     group = random.choice(db.create_groupid_list())
     # print("\n" + "-" * 10 + "Contacts" + "-" * 10)
+    print("-" * 20)
     l = db.get_project_list()
     for item in l:
         print(item)
+    print("-" * 20)
+    print("Count projects: " + str(len(l)) + "\n")
     # print("*** Total contacts count: " + str(len(l)) + " ***" + "\n" + "\n" + "-" * 10 + "Groups" + "-" * 10)
     # l = db.get_group_list()
     # for item in l:

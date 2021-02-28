@@ -11,5 +11,16 @@
     "database": "bugtracker",
     "user": "root",
     "password": ""
-   }
+   },
+  "ftp": {
+    "host": "localhost",
+    "user": "mantis",
+    "password": "mantis"
+  },
+  "james": {
+    "host": "localhost",
+    "port": "4555",
+    "username": "root",
+    "password": "root"
+  }
 }
